@@ -1,0 +1,71 @@
+name:                print
+version:             0.1.5
+synopsis:            Simple printing for Text.
+description:         Simple printing for Text.
+homepage:            https://github.com/sdiehl/print
+license:             MIT
+license-file:        LICENSE
+author:              Stephen Diehl
+maintainer:          stephen.m.diehl@gmail.com
+copyright:           2016 Stephen Diehl
+category:            Prelude
+build-type:          Simple
+cabal-version:       >=1.10
+tested-with:         
+  GHC == 7.6.1,
+  GHC == 7.6.2,
+  GHC == 7.6.3,
+  GHC == 7.8.1,
+  GHC == 7.8.2,
+  GHC == 7.8.3,
+  GHC == 7.8.4,
+  GHC == 7.10.1,
+  GHC == 7.10.2,
+  GHC == 7.10.3,
+  GHC == 8.0.1
+Bug-Reports:         https://github.com/sdiehl/print/issues
+
+description:
+    Simple printing for Text.
+Source-Repository head
+    type: git
+    location: git@github.com:sdiehl/print.git
+
+library
+  exposed-modules:     
+    Print
+
+  default-extensions:
+    NoImplicitPrelude
+    OverloadedStrings
+    ExtendedDefaultRules
+    FlexibleContexts
+    FlexibleInstances
+
+  ghc-options:
+    -fwarn-implicit-prelude
+    -fwarn-incomplete-patterns
+    -fwarn-unused-imports
+    -O2
+
+  build-depends:       
+    base             >= 4.6  && <4.10,
+    text             >= 1.2  && <1.3,
+    text-format      >= 0.3  && <0.4
+
+  hs-source-dirs:      src
+  default-language:    Haskell2010
+
+executable Example
+  default-language: Haskell2010
+  main-is: Example.hs
+  default-extensions:
+    NoImplicitPrelude
+  build-depends: 
+    base         >= 4.6  && <4.10,
+    text         >= 1.2  && <1.3,
+    text-format  >= 0.3  && <0.4,
+    print        -any,
+
+    -- doesn't require this, just for example
+    protolude    >= 0.1.5
