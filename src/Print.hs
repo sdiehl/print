@@ -25,6 +25,7 @@ module Print (
 import Data.Int
 import Data.Word
 import Data.Char
+import Data.Maybe
 import Data.Monoid
 import Data.Either
 import Data.Function
