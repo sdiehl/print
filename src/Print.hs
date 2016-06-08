@@ -49,7 +49,7 @@ default (Text)
 
 type ShowS = TB.Builder -> TB.Builder
 
-data Type = Rec | Pref | Inf Text
+data PType = Rec | Pref | Inf Text
 
 appPrec, appPrec1 :: Int
 appPrec = 10
@@ -107,7 +107,7 @@ class Show a where
   show x = TB.toLazyText (shows x "")
 
 class GShow f where
-  gshowsPrec :: Type -> Int -> f a -> ShowS
+  gshowsPrec :: PType -> Int -> f a -> ShowS
   basic :: f a -> Bool
   basic _ = False
 
