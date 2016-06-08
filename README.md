@@ -1,6 +1,8 @@
 Print
 =====
 
+[![Build Status](https://travis-ci.org/sdiehl/print.svg?branch=master)](https://travis-ci.org/sdiehl/print)
+
 Simple printing with Text. This is a prototype, not production code.
 
 ```haskell
