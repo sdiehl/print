@@ -1,5 +1,4 @@
 {-# LANGUAGE TypeOperators #-}
-{-# LANGUAGE ConstraintKinds #-}
 {-# LANGUAGE FlexibleContexts #-}
 {-# LANGUAGE FlexibleInstances #-}
 {-# LANGUAGE DefaultSignatures #-}
@@ -220,16 +219,16 @@ instance Show Char where
 instance Show a => Show [a]  where
   showsPrec _ = showList
 
-{-# INLINE con0 #-}
 con0 :: Text -> ShowS
 con0 = showText
+{-# INLINE con0 #-}
 
-{-# INLINE con1 #-}
 con1 :: Show a => Text -> Int -> a -> ShowS
 con1 con p x = 
   showParen (p > appPrec) $
     showText con .
     showsPrec appPrec1 x
+{-# INLINE con1 #-}
 
 instance Show () where
   showsPrec _ () = showText "()"
