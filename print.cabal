@@ -1,7 +1,7 @@
 name:                print
 version:             0.1.5
 synopsis:            Simple printing for Text.
-description:         Simple printing for Text.
+description:         Simple printing for Text and automatic deriving of Text Show.
 homepage:            https://github.com/sdiehl/print
 license:             MIT
 license-file:        LICENSE
