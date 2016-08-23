@@ -75,8 +75,6 @@ script:
  # (including tests/benchmarks)
  - cabal build
 
- - cabal check
-
  # tests that a source-distribution can be generated
  - cabal sdist
 
