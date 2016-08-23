@@ -33,11 +33,11 @@ data I a b  = a :. b
 main :: IO ()
 main = do
   print [Cat, Dog]
-  print [0,5..100]
+  print [0 :: Int,5..100]
   print (T1 42 False)
   print (T2 1 True, B 1 (T3 False 3))
   print (B 3 [Cat, Dog])
-  print (show 0.5 == show (1/2))
+  print (show (0.5 :: Double) == show ((1/2) :: Double))
   print ("継続は力なり" :: Text)
   print ("To be or not to be.\nThat is the question." :: Text)
-  putStrLn (show 3.1415926535)
+  putStrLn (show (3.1415926535 :: Double))
